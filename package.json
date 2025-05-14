@@ -49,7 +49,7 @@
     "git-cz": "^4.9.0",
     "onnxruntime-web": "^1.22.0",
     "prettier": "^3.2.5",
-    "putout": "^40.0.10",
+    "putout": "^40.1.9",
     "release-it": "^19.0.1",
     "remark-github": "^12.0.0",
     "remark-toc": "^9.0.0",
