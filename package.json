@@ -1,7 +1,30 @@
 {
   "name": "wrapture",
   "version": "0.0.1",
-  "description": "",
+  "description": "Wrapture lets you go from a Python-trained model to deployable JavaScript with a single command. It generates TypeScript bindings and a Web/Node-compatible wrapper, using WebGPU/WASM-ready ONNX runtimes.",
+  "keywords": [
+    "onnx",
+    "pytorch",
+    "torch",
+    "model exporter",
+    "onnx export",
+    "onnx runtime",
+    "onnx to javascript",
+    "machine learning",
+    "ml model conversion",
+    "typescript",
+    "javascript",
+    "cli tool",
+    "webgpu",
+    "wasm",
+    "onnx simplifier",
+    "onnx quantization",
+    "deep learning",
+    "model conversion",
+    "wrapture",
+    "loadModel",
+    "predict"
+  ],
   "homepage": "https://github.com/phun-ky/wrapture#readme",
   "bugs": {
     "url": "https://github.com/phun-ky/wrapture/issues"
@@ -18,11 +41,11 @@
     "wrapture": "./bin/wrapture.js"
   },
   "scripts": {
+    "build": "tsup",
     "commit": "npx git-cz",
     "docs:gen": "node ./node_modules/.bin/typedoc",
     "release": "release-it",
     "start": "node ./bin/wrapture.js",
-    "build": "tsup",
     "style:code": "npx putout src",
     "style:format": "./node_modules/.bin/eslint -c ./eslint.config.mjs src  --fix && ./node_modules/.bin/prettier --write ./eslint.config.mjs src",
     "style:lint": "./node_modules/.bin/eslint -c ./eslint.config.mjs src && ./node_modules/.bin/prettier --check src",
@@ -30,12 +53,10 @@
     "pretest:ci": "rm -rf coverage && mkdir -p coverage",
     "test:ci": "NODE_ENV=test glob -c \"node --import tsx --test --no-warnings --experimental-test-coverage --test-reporter=cobertura --test-reporter-destination=coverage/cobertura-coverage.xml --test-reporter=spec --test-reporter-destination=stdout\" \"./src/**/__tests__/**/*.[jt]s\""
   },
-  "engines": {
-    "node": ">=22.0.0",
-    "npm": ">=10.8.2"
-  },
-  "publishConfig": {
-    "access": "public"
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "ora": "^8.2.0"
   },
   "devDependencies": {
     "@release-it/conventional-changelog": "^10.0.0",
@@ -66,9 +87,11 @@
     "typescript": "^5.0.0",
     "unified-prettier": "^2.0.1"
   },
-  "dependencies": {
-    "chalk": "^5.4.1",
-    "commander": "^13.1.0",
-    "ora": "^8.2.0"
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.8.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
