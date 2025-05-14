@@ -1,0 +1,74 @@
+{
+  "name": "wrapture",
+  "version": "0.0.0",
+  "description": "",
+  "homepage": "https://github.com/phun-ky/wrapture#readme",
+  "bugs": {
+    "url": "https://github.com/phun-ky/wrapture/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phun-ky/wrapture.git"
+  },
+  "funding": "https://github.com/phun-ky/angle?sponsor=1",
+  "license": "MIT",
+  "author": "Alexander Vassbotn Røyne-Helgesen <alexander@phun-ky.net>",
+  "type": "module",
+  "bin": {
+    "wrapture": "./bin/wrapture.js"
+  },
+  "scripts": {
+    "commit": "npx git-cz",
+    "docs:gen": "node ./node_modules/.bin/typedoc",
+    "release": "release-it",
+    "start": "node ./bin/wrapture.js",
+    "build": "tsup",
+    "style:code": "npx putout src",
+    "style:format": "./node_modules/.bin/eslint -c ./eslint.config.mjs src  --fix && ./node_modules/.bin/prettier --write ./eslint.config.mjs src",
+    "style:lint": "./node_modules/.bin/eslint -c ./eslint.config.mjs src && ./node_modules/.bin/prettier --check src",
+    "test": "NODE_ENV=test glob -c \"node --import tsx --test --no-warnings\" \"./src/**/__tests__/**/*.[jt]s\"",
+    "pretest:ci": "rm -rf coverage && mkdir -p coverage",
+    "test:ci": "NODE_ENV=test glob -c \"node --import tsx --test --no-warnings --experimental-test-coverage --test-reporter=cobertura --test-reporter-destination=coverage/cobertura-coverage.xml --test-reporter=spec --test-reporter-destination=stdout\" \"./src/**/__tests__/**/*.[jt]s\""
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.8.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@release-it/conventional-changelog": "^10.0.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@stylistic/eslint-plugin": "^4.2.0",
+    "@types/node": "^22.15.3",
+    "cobertura": "^1.0.1",
+    "eslint": "^9.20.0",
+    "eslint-config-phun-ky": "^1.0.0",
+    "git-cz": "^4.9.0",
+    "onnxruntime-web": "^1.22.0",
+    "prettier": "^3.2.5",
+    "putout": "^40.0.10",
+    "release-it": "^19.0.1",
+    "remark-github": "^12.0.0",
+    "remark-toc": "^9.0.0",
+    "tslib": "^2.3.1",
+    "tsup": "^8.4.0",
+    "tsx": "^4.7.1",
+    "typedoc": "^0.28.3",
+    "typedoc-plugin-frontmatter": "^1.0.0",
+    "typedoc-plugin-markdown": "^4.2.3",
+    "typedoc-plugin-mdn-links": "^5.0.1",
+    "typedoc-plugin-no-inherit": "^1.4.0",
+    "typedoc-plugin-remark": "^2.0.0",
+    "typedoc-plugin-rename-defaults": "^0.7.1",
+    "typescript": "^5.0.0",
+    "unified-prettier": "^2.0.1"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "ora": "^8.2.0"
+  }
+}
