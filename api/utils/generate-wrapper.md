@@ -2,21 +2,22 @@
 
 # utils/generate-wrapper
 
-> Last updated 2025-05-14T12:43:13.388Z
+> Last updated 2025-05-14T13:01:49.182Z
 
 ## Interfaces
 
 ### GenerateWrapperOptionsInterface
 
-Defined in: utils/generate-wrapper.ts:9
+Defined in:
+[utils/generate-wrapper.ts:9](https://github.com/phun-ky/wrapture/blob/main/src/utils/generate-wrapper.ts#L9)
 
 Options for generating ONNX wrapper files.
 
 #### Properties
 
-| Property                       | Type     | Description                                                                                                                                                                      | Defined in                   |
-| ------------------------------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| <a id="backend"></a> `backend` | `string` | The backend to use for inference. This affects the model file used. If set to `'wasm'`, the generated wrapper will load `model_quant.onnx`, otherwise it will load `model.onnx`. | utils/generate-wrapper.ts:15 |
+| Property                       | Type     | Description                                                                                                                                                                      | Defined in                                                                                                      |
+| ------------------------------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| <a id="backend"></a> `backend` | `string` | The backend to use for inference. This affects the model file used. If set to `'wasm'`, the generated wrapper will load `model_quant.onnx`, otherwise it will load `model.onnx`. | [utils/generate-wrapper.ts:15](https://github.com/phun-ky/wrapture/blob/main/src/utils/generate-wrapper.ts#L15) |
 
 ## Functions
 
@@ -26,7 +27,8 @@ Options for generating ONNX wrapper files.
 function generateWrapper(outputDir, opts): Promise<void>;
 ```
 
-Defined in: utils/generate-wrapper.ts:39
+Defined in:
+[utils/generate-wrapper.ts:39](https://github.com/phun-ky/wrapture/blob/main/src/utils/generate-wrapper.ts#L39)
 
 Generates a TypeScript wrapper and type definition file (`wrapped.ts` and
 `wrapped.d.ts`) for use with `onnxruntime-web`, including utility functions like

@@ -2,22 +2,23 @@
 
 # utils/convert
 
-> Last updated 2025-05-14T12:43:13.319Z
+> Last updated 2025-05-14T13:01:49.077Z
 
 ## Interfaces
 
 ### ConvertOptionsInterface
 
-Defined in: utils/convert.ts:17
+Defined in:
+[utils/convert.ts:17](https://github.com/phun-ky/wrapture/blob/main/src/utils/convert.ts#L17)
 
 Options for the [convert](#convert) function.
 
 #### Properties
 
-| Property                          | Type      | Description                                                                                   | Defined in          |
-| --------------------------------- | --------- | --------------------------------------------------------------------------------------------- | ------------------- |
-| <a id="format"></a> `format?`     | `string`  | The output format for the converted model (e.g., 'onnx'). Defaults to 'onnx' if not provided. | utils/convert.ts:22 |
-| <a id="quantize"></a> `quantize?` | `boolean` | Whether to apply quantization to the model.                                                   | utils/convert.ts:27 |
+| Property                          | Type      | Description                                                                                   | Defined in                                                                                    |
+| --------------------------------- | --------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| <a id="format"></a> `format?`     | `string`  | The output format for the converted model (e.g., 'onnx'). Defaults to 'onnx' if not provided. | [utils/convert.ts:22](https://github.com/phun-ky/wrapture/blob/main/src/utils/convert.ts#L22) |
+| <a id="quantize"></a> `quantize?` | `boolean` | Whether to apply quantization to the model.                                                   | [utils/convert.ts:27](https://github.com/phun-ky/wrapture/blob/main/src/utils/convert.ts#L27) |
 
 ## Functions
 
@@ -27,7 +28,8 @@ Options for the [convert](#convert) function.
 function convert(inputPath, outputDir, opts): Promise<void>;
 ```
 
-Defined in: utils/convert.ts:54
+Defined in:
+[utils/convert.ts:54](https://github.com/phun-ky/wrapture/blob/main/src/utils/convert.ts#L54)
 
 Converts a machine learning model to ONNX or another supported format by
 delegating to a Python script (`convert.py`).
