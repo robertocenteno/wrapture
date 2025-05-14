@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.2](https://github.com/phun-ky/wrapture/compare/0.0.1...0.0.2) (2025-05-14)
+
+### Documentation
+
+* ✏️ Remove stuff ([9ecee83](https://github.com/phun-ky/wrapture/commit/9ecee83a69ae7f1fa2dc43c3e6948a366f8050d0))
+* ✏️ Update keywords ([40a80a8](https://github.com/phun-ky/wrapture/commit/40a80a8738bcc475ad76407de6a2d33e4cb82a9b))
+
 ## 0.0.1 (2025-05-14)
 
 ### Tasks
