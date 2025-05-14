@@ -25,8 +25,6 @@ wrapper, using WebGPU/WASM-ready ONNX runtimes.
 
 ## Table of Contents<!-- omit from toc -->
 
----- [🌀 Wrapture](#-wrapture)
-
 - [🌀 Wrapture](#-wrapture)
   - [About](#about)
   - [🚀 Features](#-features)
