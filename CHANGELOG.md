@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.3](https://github.com/phun-ky/wrapture/compare/0.0.2...0.0.3) (2025-05-14)
+
+### Bug
+
+* 🐛 Python env ([36d0a30](https://github.com/phun-ky/wrapture/commit/36d0a302aebfabf9860f7cc5c70bc8151b221632))
+
 ## [0.0.2](https://github.com/phun-ky/wrapture/compare/0.0.1...0.0.2) (2025-05-14)
 
 ### Documentation
