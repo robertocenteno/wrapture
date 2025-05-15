@@ -62,7 +62,7 @@ Install Python if you don’t have it: 👉 <https://www.python.org/downloads/>
 ### Install required Python packages
 
 ```shell-session
-python3 -m pip install torch onnx onnxsim onnxruntime onnxruntime-tools
+python3 -m pip install torch onnx onnxsim onnxruntime
 ```
 
 Check your installation:

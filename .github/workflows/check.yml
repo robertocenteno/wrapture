@@ -54,7 +54,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           python3 -m pip install --upgrade pip
-          pip install torch onnx onnxsim onnxruntime onnxruntime-tools
+          pip install torch onnx onnxsim onnxruntime
       - name: Install dependencies
         run: | # Install and link dependencies
           npm i
