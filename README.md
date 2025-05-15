@@ -1,5 +1,11 @@
 # 🌀 Wrapture
 
+<p align="center" width="100%">
+    <img width="256px" src="./public/wrapture-logo-small.png" alt="wrapture logo" />
+</p>
+
+> One-click exporter from PyTorch models to Web-ready ONNX with JS/TS wrappers.
+
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](http://makeapullrequest.com)
 [![SemVer 2.0](https://img.shields.io/badge/SemVer-2.0-green.svg)](http://semver.org/spec/v2.0.0.html)
@@ -11,8 +17,6 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/phun-ky/wrapture)
 [![codecov](https://codecov.io/gh/phun-ky/wrapture/graph/badge.svg?token=VA91DL7ZLZ)](https://codecov.io/gh/phun-ky/wrapture)
 [![build](https://github.com/phun-ky/wrapture/actions/workflows/check.yml/badge.svg)](https://github.com/phun-ky/wrapture/actions/workflows/check.yml)
-
-> One-click exporter from PyTorch models to Web-ready ONNX with JS/TS wrappers.
 
 ## About
 
