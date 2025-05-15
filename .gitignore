@@ -239,3 +239,4 @@ dist
 wrapped.ts
 wrapped.d.ts
 *.onnx
+bin
