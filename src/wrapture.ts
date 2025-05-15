@@ -18,18 +18,25 @@ const program = new Command();
 
 program
   .name('wrapture')
-  .description('🌀 One-click model exporter: from PyTorch to Web-ready JS/TS')
-  .version('0.1.0')
-  .requiredOption('-i, --input <file>', 'Path to the PyTorch model (.pt)')
+  .description(
+    `🌀 ${chalk.blue('One-click model exporter: ')}from PyTorch to Web-ready JS/TS.
+
+Wrapture lets you go from a Python-trained model to deployable JavaScript with a single command.
+It generates TypeScript bindings and a Web/Node-compatible wrapper, using WebGPU/WASM-ready ONNX runtimes.
+
+Report issues here: https://github.com/phun-ky/wrapture`
+  )
+  .version(pkg.version)
+  .requiredOption('-i, --input <file>', 'path to the PyTorch model (.pt)')
   .requiredOption(
     '-o, --output <dir>',
-    'Output directory for the wrapped model'
+    'output directory for the wrapped model'
   )
-  .option('--quantize', 'Apply quantization to reduce model size')
-  .option('--format <type>', 'Export format: onnx (default)', 'onnx')
+  .option('--quantize', 'apply quantization to reduce model size')
+  .option('--format <type>', 'export format: onnx (default)', 'onnx')
   .option(
     '--backend <backend>',
-    'Inference backend: webgpu | wasm | cpu',
+    'inference backend: webgpu | wasm | cpu',
     'webgpu'
   )
   .option(
