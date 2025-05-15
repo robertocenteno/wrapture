@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.1](https://github.com/phun-ky/wrapture/compare/0.1.0...0.1.1) (2025-05-15)
+
+### Documentation
+
+* ✏️ Add logo ([58ffd35](https://github.com/phun-ky/wrapture/commit/58ffd359d9cd5b8e0b538f4d6cd3cd5f7b3dee7a))
+
 ## [0.1.0](https://github.com/phun-ky/wrapture/compare/0.0.3...0.1.0) (2025-05-15)
 
 ### Tasks
