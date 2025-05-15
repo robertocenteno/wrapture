@@ -43,9 +43,9 @@ def convert_to_onnx(input_path, output_path, quantize=False):
     assert check, "Simplified model could not be validated"
     onnx.checker.check_model(model_simp)  # throw if broken
     onnx.save(model_simp, output_model_path)
-    print("✅ ONNX model simplified.")
+    print("✓ ONNX model simplified.")
 
-    print(f"✅ Exported ONNX model to: {output_model_path}")
+    print(f"✓ Exported ONNX model to: {output_model_path}")
 
     if quantize:
         quant_model_path = os.path.join(output_path, 'model_quant.onnx')

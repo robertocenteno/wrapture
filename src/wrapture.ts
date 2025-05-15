@@ -2,12 +2,14 @@
 /* global process */
 import chalk from 'chalk';
 import { Command } from 'commander';
+import ora from 'ora';
 
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 
 import { convert } from './utils/convert.js';
 import { generateWrapper } from './utils/generate-wrapper.js';
+import { LogLevelType, setLogLevel } from './utils/log-level.js';
 
 const program = new Command();
 
@@ -27,23 +29,36 @@ program
     'Inference backend: webgpu | wasm | cpu',
     'webgpu'
   )
+  .option(
+    '--logLevel <level>',
+    'set log level: silent | error | warn | info | debug',
+    'error'
+  )
   .action(async (opts) => {
     const input = path.resolve(opts.input);
     const output = path.resolve(opts.output);
 
+    setLogLevel(
+      (process.env.LOGLEVEL as LogLevelType) || opts.logLevel || 'error'
+    );
+
     if (!existsSync(input)) {
-      console.error(chalk.red(`Input file not found: ${input}`));
+      console.error(
+        `${chalk.red.bold('✘ Input file not found:')} ${chalk.white(input)}`
+      );
       process.exit(1);
     }
 
-    console.log(chalk.cyan('✨ Wrapture: Exporting model...'));
+    const spinner = ora('Wrapture: Exporting model...').start();
 
     try {
       await convert(input, output, opts);
       await generateWrapper(output, opts);
-      console.log(chalk.green('✅ Done! Your model is wrapped and ready.'));
+      spinner.succeed('Done! Your model is wrapped and ready.');
     } catch (err) {
-      console.error(chalk.red('❌ Failed to export model:'), err);
+      spinner.fail('Failed to export model:');
+      console.error(err);
+
       process.exit(1);
     }
   });

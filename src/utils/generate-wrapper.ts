@@ -1,7 +1,8 @@
-import ora from 'ora';
-
+/* eslint-disable import/no-unused-modules */
 import fs from 'node:fs';
 import path from 'node:path';
+
+import { log } from './log-level.js';
 
 /**
  * Options for generating ONNX wrapper files.
@@ -38,10 +39,11 @@ export interface GenerateWrapperOptionsInterface {
  */
 export const generateWrapper = async (
   outputDir: string,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+
   opts: GenerateWrapperOptionsInterface
 ): Promise<void> => {
-  const spinner = ora('🛠 Generating wrapper files...').start();
+  log.info('Generating wrapper files...');
+
   const wrapper = `import { InferenceSession, Tensor } from 'onnxruntime-web';
 
 const softmax = (logits) => {
@@ -99,9 +101,10 @@ export function loadModel(): Promise<LoadedModel>;`;
   try {
     fs.writeFileSync(path.join(outputDir, 'wrapped.ts'), wrapper);
     fs.writeFileSync(path.join(outputDir, 'wrapped.d.ts'), typings);
-    spinner.succeed('✅ Wrapper files generated.');
+
+    log.info('Wrapper files generated');
   } catch (error) {
-    spinner.fail('❌ Failed to generate wrapper files.');
+    log.error('Failed generate wrapper files');
     throw error;
   }
 };
