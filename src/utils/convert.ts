@@ -1,15 +1,10 @@
 /* eslint-disable import/no-unused-modules */
 /* global process */
-import chalk from 'chalk';
-import ora from 'ora';
-
 import { spawn } from 'node:child_process';
 import fs from 'node:fs';
-import path, { dirname } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import path from 'node:path';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import { log } from './log-level.js';
 
 /**
  * Options for the {@link convert} function.
@@ -60,10 +55,13 @@ export const convert = async (
     throw new Error(`Input model file not found: ${inputPath}`);
   }
 
-  const spinner = ora('🔄 Converting model to ONNX...').start();
+  log.info('Converting model to ONNX...');
 
   return new Promise((resolve, reject) => {
-    const scriptPath = path.resolve(__dirname, '../../python/convert.py');
+    const scriptPath = path.resolve(process.cwd(), 'python/convert.py');
+
+    log.debug('Script path for `convert.py`:', scriptPath);
+
     const args = [
       scriptPath,
       '--input',
@@ -78,18 +76,21 @@ export const convert = async (
 
     const python = spawn('python3', args);
 
-    python.stdout.on('data', (data) => process.stdout.write(data));
-    python.stderr.on('data', (data) =>
-      process.stderr.write(chalk.red(data.toString()))
-    );
+    python.stdout.on('data', (data) => {
+      log.debug('[python stdout]', data.toString());
+    });
+
+    python.stderr.on('data', (data) => {
+      log.error('[python stderr]', data.toString());
+    });
 
     python.on('close', (code) => {
       if (code === 0) {
-        spinner.succeed('✅ Model converted successfully.');
+        log.info('Model converted successfully');
 
         resolve();
       } else {
-        spinner.fail('❌ Model conversion failed.');
+        log.error('Model conversion failed');
 
         reject(new Error(`convert.py exited with code ${code}`));
       }
