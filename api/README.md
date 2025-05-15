@@ -1,11 +1,13 @@
 # wrapture API documentation
 
-> Last updated 2025-05-14T17:28:21.410Z
+> Last updated 2025-05-15T10:00:06.699Z
 
 ## Modules
 
+- [utils/check-deps](utils/check-deps.md)
 - [utils/convert](utils/convert.md)
 - [utils/generate-wrapper](utils/generate-wrapper.md)
+- [utils/log-level](utils/log-level.md)
 - [wrapture](wrapture.md)
 
 ---

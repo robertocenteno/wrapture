@@ -1,5 +1,27 @@
 # Changelog
 
+## [0.1.0](https://github.com/phun-ky/wrapture/compare/0.0.3...0.1.0) (2025-05-15)
+
+### Tasks
+
+* 🤖 add `bin/` to `.gitignore` ([a90b288](https://github.com/phun-ky/wrapture/commit/a90b2880a6179010b6133f719eb7696759e6ac06))
+* 🤖 Delete file from bin ([b707abd](https://github.com/phun-ky/wrapture/commit/b707abddd989c43da70bf91512d75e752c18456c))
+* 🤖 Remove old dep imports ([819e9e4](https://github.com/phun-ky/wrapture/commit/819e9e439f0bbf50383038db2cded3d3c167e3f3))
+* 🤖 Use correct label ([3d6acf0](https://github.com/phun-ky/wrapture/commit/3d6acf0311f18e9e2d90b4a129f0dc7cae9b955c))
+
+### Feature
+
+* 🎸 Add `--logLevel`-option and clean up messages ([c93f4ef](https://github.com/phun-ky/wrapture/commit/c93f4ef0570d4fe7501776f2fbce1ed362e048a7))
+* 🎸 Check for correct dependencies ([28d1d4d](https://github.com/phun-ky/wrapture/commit/28d1d4def395c700285caf82139e8b0786cc4855))
+
+### Bug
+
+* 🐛 Remove outtdated python module ([0b58d3c](https://github.com/phun-ky/wrapture/commit/0b58d3cc5c2758b606333e011766a3ed91fbfa74))
+
+### Refactoring
+
+* 💡 Adjust cli interface ([ddc80b9](https://github.com/phun-ky/wrapture/commit/ddc80b9d96f11133c2aa4e26ffcde40f316f12a8))
+
 ## [0.0.3](https://github.com/phun-ky/wrapture/compare/0.0.2...0.0.3) (2025-05-14)
 
 ### Bug
