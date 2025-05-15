@@ -1,4 +1,4 @@
-# 🌀 Wrapture
+# Wrapture
 
 <p align="center" width="100%">
     <img width="256px" src="./public/wrapture-logo-small.png" alt="wrapture logo" />
@@ -24,12 +24,13 @@ Wrapture lets you go from a Python-trained model to deployable JavaScript with a
 single command. It generates TypeScript bindings and a Web/Node-compatible
 wrapper, using WebGPU/WASM-ready ONNX runtimes.
 
-> [!NOTE] This is an experiment trying to fulfil a need between python and js.
+> [!NOTE]
+> This is an experiment trying to fulfil a need between python and js.
 > YMMV
 
 ## Table of Contents<!-- omit from toc -->
 
-- [🌀 Wrapture](#-wrapture)
+- [Wrapture](#-wrapture)
   - [About](#about)
   - [🚀 Features](#-features)
   - [Prerequisites](#prerequisites)
