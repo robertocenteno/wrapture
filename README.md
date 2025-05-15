@@ -13,7 +13,7 @@
 ![issues](https://img.shields.io/github/issues/phun-ky/wrapture)
 ![license](https://img.shields.io/npm/l/wrapture)
 ![size](https://img.shields.io/bundlephobia/min/wrapture)
-![npm](https://img.shields.io/npm/dm/%40wrapture)
+![npm](https://img.shields.io/npm/dm/wrapture)
 ![GitHub Repo stars](https://img.shields.io/github/stars/phun-ky/wrapture)
 [![codecov](https://codecov.io/gh/phun-ky/wrapture/graph/badge.svg?token=VA91DL7ZLZ)](https://codecov.io/gh/phun-ky/wrapture)
 [![build](https://github.com/phun-ky/wrapture/actions/workflows/check.yml/badge.svg)](https://github.com/phun-ky/wrapture/actions/workflows/check.yml)
