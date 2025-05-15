@@ -7,6 +7,9 @@ import ora from 'ora';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 
+import pkg from '../package.json';
+
+import { checkPythonAvailable, checkPythonDeps } from './utils/check-deps.js';
 import { convert } from './utils/convert.js';
 import { generateWrapper } from './utils/generate-wrapper.js';
 import { LogLevelType, setLogLevel } from './utils/log-level.js';
@@ -35,6 +38,9 @@ program
     'error'
   )
   .action(async (opts) => {
+    checkPythonAvailable();
+    checkPythonDeps();
+
     const input = path.resolve(opts.input);
     const output = path.resolve(opts.output);
 
